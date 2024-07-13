@@ -1,0 +1,98 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "escapeblock"
+	"$transparency" 1
+
+	"$collide" 0
+	"$frametoset" 0
+	
+	"$inactivealpha" "0.66"
+	
+	"$zero" 0
+	"$one"	1
+	"$two"	2
+	
+	"$framecount" 6
+	
+	"Proxies"
+	{
+		//constantly try to increment frame
+		"AnimatedTexture"
+		{
+			"animatedTextureVar" "$basetexture"
+			"animatedTextureFrameNumVar" "$frame"
+			"animatedTextureFrameRate" "24"
+		}
+		
+		//if the frame is zero, skip past it
+		
+		//set our temp var
+		"Equals"
+		{
+			srcVar1 $frame
+			resultVar $frametoset
+		}
+		
+		//add one to it
+		"Add"
+		{
+			srcVar1 $frametoset
+			srcVar2 $one
+			resultVar $frametoset
+		}
+		
+		//if it's zero, we will set frame to frametoset, skipping it
+		"LessOrEqual"
+		{
+			srcVar1 $frame //if frame == 0
+			srcVar2 $zero
+			
+			resultVar $frame //frame =
+			
+			greaterVar $frametoset //itself + 1
+			lessEqualVar $one //one
+		}
+		
+		//if it's out of bounds, set to 1
+		"LessOrEqual"
+		{
+			srcVar1 $frame //if frame == num of frames in file
+			srcVar2 $framecount
+			
+			resultVar $frame //frame =
+			
+			greaterVar $two //two
+			lessEqualVar $frame //itself
+		}
+		
+		//do we collide with this john block?
+		"PlayerTeamMatch"
+		{
+			resultVar $collide
+		}
+		
+		//if we dont collide, set the frame to 0, sleeping face
+		"LessOrEqual"
+		{			
+			srcVar1 $collide //if we dont collide
+			srcVar2 $zero
+			
+			resultVar $frame //frame =
+			
+			greaterVar $zero //zero
+			lessEqualVar $frame //itself
+		}
+		
+		//if we dont collide, set the transparency
+		"LessOrEqual"
+		{			
+			srcVar1 $collide //if we dont collide
+			srcVar2 $zero
+			
+			resultVar $alpha //alpha =
+			
+			greaterVar $inactivealpha //preset inactive alpha
+			lessEqualVar $one //one
+		}
+	}
+}

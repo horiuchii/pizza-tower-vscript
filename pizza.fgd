@@ -1,0 +1,12 @@
+@include "base.fgd"
+@include "tf.fgd"
+
+@SolidClass base(Targetname, Parentname, Origin) = func_forcefield : 
+	"Brushes that become visible to enemy players when they get close. Use them to mark areas that they're unable to enter." 
+[
+	TeamNum(choices) : "Initial State" : 0 : "Team" =
+	[
+		2 : "Inactive"
+		3 : "Active"
+	]
+]

@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "combo_tier/combo_tier"
+	"$transparent" 1
+	"$model" 1
+	"$frame" 3
+}

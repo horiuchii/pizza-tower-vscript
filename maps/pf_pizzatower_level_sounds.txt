@@ -1,0 +1,72 @@
+"PizzaTower.PizzaTime"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"wave"		"JOHN_PILLAR_IMPACT.mp3"
+}
+
+"PizzaTower.ComboUp"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"rndwave"
+	{
+		"wave"		"comboup1.mp3"
+		"wave"		"comboup2.mp3"
+		"wave"		"comboup4.mp3"
+	}
+}
+
+"PizzaTower.ComboEnd"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"wave"		"sfx_comboend.mp3"
+}
+
+"PizzaTower.SecretEnter"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"wave"		"sfx_secretenter.mp3"
+}
+
+"PizzaTower.SecretExit"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"wave"		"sfx_secretexit.mp3"
+}
+
+"PizzaTower.SecretFind"
+{
+	"channel"		"CHAN_STATIC"
+	"pitch"				"100"
+	"volume"			"1"
+	"wave"		"sfx_secretfound.mp3"
+}
+
+"PizzaTower.SmallCollect"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.000"
+	"pitch"			"95,105"
+	"soundlevel"	"SNDLVL_90dB"
+
+	"wave"			"mvm/mvm_money_pickup.wav"
+}
+
+"PizzaTower.LargeCollect"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.000"
+	"pitch"			"35,45"
+	"soundlevel"	"SNDLVL_90dB"
+
+	"wave"			"mvm/mvm_money_pickup.wav"
+}

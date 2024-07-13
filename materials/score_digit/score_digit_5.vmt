@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "score_digit/score_digit"
+	"$alphatest" 1
+	"$model" 1
+	"$frame" 5
+}

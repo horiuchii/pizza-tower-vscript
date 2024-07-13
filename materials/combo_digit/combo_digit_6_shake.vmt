@@ -1,0 +1,36 @@
+"UnlitGeneric"
+{
+	"$basetexture" "combo_digit/combo_digit"
+	"$alphatest" 1
+	"$model" 1
+	"$frame" 6
+	
+	"$texturetransform_translate" "[0.0 0.0]"
+	"$texturetransform_angle" 0.0
+	"$texturetransform_scale" 1
+	"$texturetransform_center" "[0.5 0.5]"
+	
+	Proxies
+	{
+		"UniformNoise"
+		{
+			minVal "-0.05"
+			maxVal "0.05"
+			"resultVar" "$texturetransform_translate[0]"
+		}
+		"UniformNoise"
+		{
+			minVal "-0.05"
+			maxVal "0.05"
+			"resultVar" "$texturetransform_translate[1]"
+		}
+		"TextureTransform"
+		{
+			"translateVar" "$texturetransform_translate"
+			"rotateVar" "$texturetransform_angle"
+			"scaleVar" "$texturetransform_scale"
+			"centerVar" "$texturetransform_center"
+			"resultVar" "$basetexturetransform"
+        }
+	}
+}

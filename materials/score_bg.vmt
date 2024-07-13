@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "score_bg"
+	"$alphatest" 1
+	"$model" 1
+}

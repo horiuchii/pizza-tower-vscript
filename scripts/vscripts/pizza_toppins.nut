@@ -1,0 +1,1 @@
+//create 5 entities that "follow" the player

@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "tv_hud/BG_01"
+	"$alphatest" 1
+	"$model" 1
+	
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar" "$basetexture"
+			"animatedTextureFrameNumVar" "$frame"
+			"animatedTextureFrameRate" "24"
+		}
+	}
+}
